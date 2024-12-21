@@ -1,6 +1,6 @@
 module "vpc" {
   for_each = var.vpc
-  source = "https://github.com/surendraalamuru22/tf-vpc.git"
+  source = "./vendor/modules/vpc"
   cidr_block = each.value.cidr_block
 }
 
